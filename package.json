@@ -1,0 +1,28 @@
+{
+    "name": "advent-js",
+    "version": "1.0.0",
+    "description": "Coding challenges for Midu's AdventJS project.",
+    "main": "README.md",
+    "scripts": {
+        "tsc": "tsc",
+        "run-ts": "ts-node",
+        "test": "jest --testMatch='./**/*.test.ts'"
+    },
+    "keywords": [
+        "midudev",
+        "typescript",
+        "adventjs",
+        "coding-challenge",
+        "algorithms"
+    ],
+    "author": "Eduardo Aire Torres",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^29.5.10",
+        "jest": "^29.7.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.3.2",
+        "@jest/globals": "^29.7.0",
+        "ts-jest": "^29.1.1"
+    }
+}

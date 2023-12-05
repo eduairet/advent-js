@@ -1,0 +1,3 @@
+{
+    "test-2023": "jest --testMatch='./src/2023/**/*.test.ts'"
+}
