@@ -1,15 +1,14 @@
 export function cyberReindeer(road: string, time: number): string[] {
     const result: string[] = [road];
-    let [emptyRoad, i, position] = [`.${road.slice(1)}`, 0, 0];
-    while (time-- > 1) {
-        i++;
+    let emptyRoad = `.${road.slice(1)}`;
+    for (let i = 1, position = 0; i < time; i++) {
         if (i === 5) emptyRoad = emptyRoad.replace(/\|/g, '*');
         if (emptyRoad[position + 1] !== '|') position++;
-        const [left, right] = [
-            emptyRoad.substring(0, position),
-            emptyRoad.substring(position + 1),
+        const [l, r] = [
+            emptyRoad.slice(0, position),
+            emptyRoad.slice(position + 1),
         ];
-        result[i] = `${left}S${right}`;
+        result[i] = `${l}S${r}`;
     }
     return result;
 }
