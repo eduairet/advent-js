@@ -1,12 +1,16 @@
 export function cyberReindeer(road: string, time: number): Array<string> {
     const result = [road];
-    const emptyRoad = Array.from(road).map((char) => (char === 'S' ? '.' : char));
-    let position = 0;
+    let emptyRoad = road.replace('S', '.');
+    let [i, position] = [0, 0];
     while (time > 1) {
+        i++;
+        if (i === 5) emptyRoad = emptyRoad.replace(/\|/g, '*');
         if (emptyRoad[position + 1] !== '|') position++;
-        const left = emptyRoad.slice(0, position);
-        const right = emptyRoad.slice(position + 1);
-        result.push(`${left.join('')}S${right.join('')}`);
+        const [left, right] = [
+            emptyRoad.substring(0, position),
+            emptyRoad.substring(position + 1),
+        ];
+        result.push(`${left}S${right}`);
         time--;
     }
     return result;
