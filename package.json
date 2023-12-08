@@ -6,7 +6,8 @@
     "scripts": {
         "tsc": "tsc",
         "run-ts": "ts-node",
-        "test": "jest --testMatch='./**/*.test.ts'"
+        "test": "jest --testMatch='./**/*.test.ts'",
+        "test-single": "jest"
     },
     "keywords": [
         "midudev",
