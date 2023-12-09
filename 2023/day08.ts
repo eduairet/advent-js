@@ -16,3 +16,4 @@ export function organizeGifts(gifts: string): string {
         if (additional > 0) result.push(`(${symbol.repeat(additional)})`);
     }
     return result.join('');
+}
