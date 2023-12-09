@@ -3,8 +3,8 @@ export function organizeGifts(gifts: string): string {
     const result = [];
     for (const group of groups) {
         const [count, symbol] = [
-            +group.match(/\d+/)[0],
-            group.match(/[a-z]/)[0],
+            +group.match(/\d+/)![0],
+            group.match(/[a-z]/)![0],
         ];
 
         const pallets = Math.floor(count / 50);
