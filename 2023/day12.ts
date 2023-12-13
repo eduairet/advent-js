@@ -10,16 +10,15 @@ export function checkIsValidCopy(original: string, copy: string) {
         ':': /^[:\.]$/,
         '.': /^[\.]$/,
     };
-    const symbols = '#:+.';
-    return [...original].every((char: string, i) => {
+    for (const [i, char] of [...original].entries()) {
         const cChar = copy[i];
         // @ts-ignore
-        if (symbols.includes(char)) return re[char].test(char);
+        if (re['#'].test(char)) return re[char].test(char);
         if (re.chars.test(char)) {
             if (re.upper.test(cChar) && char !== cChar) return false;
             if (re.lower.test(cChar)) return char.toLowerCase() === cChar;
             return re.subs.test(char);
         }
         return char === cChar;
-    });
+    }
 }
