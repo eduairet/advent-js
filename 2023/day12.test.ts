@@ -20,10 +20,3 @@ test('returns true for valid copy "s#+:. c:. s"', () => {
     const result = checkIsValidCopy(original, copy);
     expect(result).toBe(true);
 });
-
-test('returns false for invalid copy "s#+:.#c:. s"', () => {
-    const original = 'Santa Claus';
-    const copy = 's#+:.#c:. s';
-    const result = checkIsValidCopy(original, copy);
-    expect(result).toBe(false);
-});

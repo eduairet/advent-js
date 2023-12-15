@@ -5,7 +5,7 @@
     "main": "README.md",
     "scripts": {
         "tsc": "tsc",
-        "run-ts": "ts-node",
+        "ts": "ts-node",
         "test": "jest --testMatch='./**/*.test.ts'",
         "test-single": "jest"
     },
