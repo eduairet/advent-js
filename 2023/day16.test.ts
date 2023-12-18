@@ -1,6 +1,7 @@
 import { transformTree } from './day16';
 
 test('transforms the tree correctly', () => {
+
     const tree = [3, 1, 0, 8, 12, null, 1];
     const expected = {
         value: 3,
