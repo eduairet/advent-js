@@ -14,6 +14,3 @@ export function findBalancedSegment(message: number[]) {
     }
     return result;
 }
-
-const arr2 = [0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1];
-console.log(findBalancedSegment(arr2));
