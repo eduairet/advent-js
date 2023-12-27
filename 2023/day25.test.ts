@@ -1,0 +1,13 @@
+import { travelDistance } from './day25';
+
+test('travelDistance - should return the correct travel distance', () => {
+    const map1 = `.....1....
+..S.......
+..........
+....3.....
+......2...`;
+    expect(travelDistance(map1)).toBe(12);
+
+    const map2 = `..S.1...`;
+    expect(travelDistance(map2)).toBe(2);
+});
