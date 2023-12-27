@@ -10,5 +10,3 @@ export function getStaircasePaths(steps: number, maxJump: number) {
     const staircasePaths = generatePaths(steps, []);
     return staircasePaths;
 }
-
-getStaircasePaths(7, 3);
