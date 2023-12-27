@@ -22,6 +22,3 @@ export function compile(code: string) {
     }
     return counter;
 }
-
-const code = '--¿+++?+++¿--?';
-console.log(compile(code));
