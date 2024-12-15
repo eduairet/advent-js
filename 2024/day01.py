@@ -1,0 +1,1 @@
+prepare_gifts = lambda gifts: sorted([x for x in set(gifts)])
