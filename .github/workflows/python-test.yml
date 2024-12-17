@@ -10,4 +10,4 @@ jobs:
         uses: onichandame/python-test-action@master
         with:
           python-version: '3.11'
-          test-command: 'python -m unittest discover'
+          test-command: python -m unittest discover -s 2024 -p "*.test.py"
