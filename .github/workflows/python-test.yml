@@ -7,4 +7,4 @@ jobs:
       - name: Prepare repo
         uses: actions/checkout@master
       - name: Test
-        uses: onichandame/python-test-action@master
+        run: python -m unittest discover -s 2024 -p "*.test.py"
