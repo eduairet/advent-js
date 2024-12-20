@@ -13,5 +13,3 @@ def draw_race(indices, length):
 
     return "\n".join(result)
 
-
-print(draw_race([2, -1, 0, 5], 8))
