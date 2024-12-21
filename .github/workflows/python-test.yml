@@ -24,4 +24,4 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover -s 2024
+          python -m unittest discover -s 2024 -v
