@@ -1,5 +1,5 @@
 import unittest
-from day05 import organizeShoes
+from day05 import organize_shoes
 
 
 class TestOrganizeShoes(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestOrganizeShoes(unittest.TestCase):
             {"type": "I", "size": 41},
             {"type": "I", "size": 42},
         ]
-        self.assertEqual(organizeShoes(shoes), [38, 38, 42])
+        self.assertEqual(organize_shoes(shoes), [38, 38, 42])
 
 
 if __name__ == "__main__":

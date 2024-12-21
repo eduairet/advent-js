@@ -1,4 +1,4 @@
-def organizeShoes(shoes):
+def organize_shoes(shoes):
     counts = {}
     for shoe in shoes:
         size = shoe["size"]

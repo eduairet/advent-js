@@ -1,5 +1,5 @@
 import unittest
-from day03 import organizeInventory
+from day03 import organize_inventory
 
 
 class TestOrganizeInventory(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestOrganizeInventory(unittest.TestCase):
         ]
 
         expected = {"toys": {"doll": 5, "car": 5}, "sports": {"ball": 2, "racket": 4}}
-        self.assertEqual(organizeInventory(inventory), expected)
+        self.assertEqual(organize_inventory(inventory), expected)
 
 
 if __name__ == "__main__":

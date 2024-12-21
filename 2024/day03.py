@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def organizeInventory(inventory):
+def organize_inventory(inventory):
     result = defaultdict(lambda: defaultdict(int))
     for item in inventory:
         result[item["category"]][item["name"]] += item["quantity"]

@@ -3,7 +3,7 @@ from day08 import draw_race
 
 
 class TestDrawRace(unittest.TestCase):
-    def testDrawRace(self):
+    def test_draw_race(self):
         self.assertEqual(
             draw_race([0, 5, -3], 10), "  ~~~~~~~~~~ /1\n ~~~~~r~~~~ /2\n~~~~~~~r~~ /3"
         )

@@ -1,5 +1,5 @@
 import unittest
-from day02 import createFrame
+from day02 import create_frame
 
 
 class TestCreateFrame(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestCreateFrame(unittest.TestCase):
             "* midu        *\n"
             "***************"
         )
-        self.assertEqual(createFrame(names), expected_output)
+        self.assertEqual(create_frame(names), expected_output)
 
 
 if __name__ == "__main__":
