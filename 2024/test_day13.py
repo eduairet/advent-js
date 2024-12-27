@@ -18,3 +18,7 @@ class TestIsRobotBack(unittest.TestCase):
         self.assertEqual(is_robot_back("U?U"), [0, 1])
         self.assertEqual(is_robot_back("U?D?U"), True)
         self.assertEqual(is_robot_back("*U?U"), [0, 2])
+
+
+if __name__ == "__main__":
+    unittest.main()
