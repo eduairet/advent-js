@@ -9,13 +9,9 @@ class TestDrawTable(unittest.TestCase):
             {"name": "Bob", "city": "Paris"},
             {"name": "Charlie", "city": "New York"},
         ]
-        expected = """
-+---------+-----------+
-| Name    | City      |
-+---------+-----------+
-| Alice   | London    |
-| Bob     | Paris     |
-| Charlie | New York  |
-+---------+-----------+
-"""
+        expected = "+---------+----------+\n| Name    | City     |\n+---------+----------+\n| Alice   | London   |\n| Bob     | Paris    |\n| Charlie | New York |\n+---------+----------+"
         self.assertEqual(draw_table(data), expected)
+
+
+if __name__ == "__main__":
+    unittest.main()

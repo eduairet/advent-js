@@ -1,46 +1,29 @@
-def draw_table(data):
-    headers = {key.capitalize() for row in data for key in row}
-    rows = [[row.get(col.lower(), "") for col in headers] for row in data]
-    col_widths = [
-        max(len(str(cell)) for cell in column) for column in zip(*([headers] + rows))
-    ]
-    divider = "+" + "+".join("-" * (width + 2) for width in col_widths) + "+"
-    formatted = [divider]
-    formatted.append(
-        "| "
-        + " | ".join(
-            f"{header.ljust(col_widths[i])}" for i, header in enumerate(headers)
-        )
-        + " |"
-    )
-    formatted.append(divider)
-    for row in rows:
-        formatted.append(
-            "| "
-            + " | ".join(
-                f"{str(cell).ljust(col_widths[i])}" for i, cell in enumerate(row)
-            )
-            + " |"
-        )
-    formatted.append(divider)
-    return "\n".join(formatted)
+def draw_table(data: list[dict[str, str | int]]) -> str:
+    table = ""
+    column_names = list(data[0].keys())
+    column_sizes = {col: len(col) for col in column_names}
 
+    for row in data:
+        for col in column_names:
+            column_sizes[col] = max(column_sizes[col], len(str(row[col])))
 
-print(
-    draw_table(
-        [
-            {"name": "Alice", "city": "London"},
-            {"name": "Bob", "city": "Paris"},
-            {"name": "Charlie", "city": "New York"},
-        ]
+    row_separator = (
+        "+" + "+".join("-" * (size + 2) for size in column_sizes.values()) + "+"
     )
-)
-"""
-+---------+-----------+
-| Name    | City      |
-+---------+-----------+
-| Alice   | London    |
-| Bob     | Paris     |
-| Charlie | New York  |
-+---------+-----------+
-"""
+
+    header = "|"
+    for col in column_names:
+        formatted_col = col[0].upper() + col[1:]
+        header += f" {formatted_col.ljust(column_sizes[col])} |"
+
+    table += f"{row_separator}\n{header}\n{row_separator}\n"
+
+    for row in data:
+        table += "|"
+        for col in column_names:
+            value = str(row[col])
+            table += f" {value.ljust(column_sizes[col])} |"
+        table += "\n"
+
+    table += row_separator
+    return table
