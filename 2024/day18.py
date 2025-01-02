@@ -11,4 +11,4 @@ def find_in_agenda(agenda: str, phone: str) -> dict | None:
     }
 
     contacts = [get_info(c) for c in agenda.split("\n") if phone in c]
-    return contacts[0] if contacts else None
+    return contacts[0] if contacts and len(contacts) == 1 else None
