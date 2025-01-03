@@ -1,4 +1,4 @@
-# AdventJS 2023
+# AdventJS 2024
 
 | Day | Challenge            |
 | --- | -------------------- |
