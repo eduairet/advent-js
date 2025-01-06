@@ -1,8 +1,10 @@
 def is_trees_synchronized(tree1, tree2):
+    if not tree1:
+        return [True, ""]
     if tree1["value"] != tree2["value"]:
         return [False, tree1["value"]]
-    if "left" in tree1:
-        left_sync, _ = is_trees_synchronized(tree1["left"], tree2["right"])
-        right_sync, _ = is_trees_synchronized(tree1["right"], tree2["left"])
-        return [left_sync and right_sync, tree1["value"]]
-    return [True, tree1["value"]]
+
+    a = is_trees_synchronized(tree1.get("left"), tree2.get("right"))[0]
+    b = a and is_trees_synchronized(tree1.get("right"), tree2.get("left"))[0]
+
+    return [a and b, tree1["value"]]
